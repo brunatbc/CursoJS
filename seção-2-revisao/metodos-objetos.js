@@ -1,6 +1,6 @@
 const produto = {
-    nome="caneta",
-    qtd = 10,
+    nome:"caneta",
+    qtd: 10,
     comprar: function(n){
         console.log(this)
         if(n > this.qtd){
