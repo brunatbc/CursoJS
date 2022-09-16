@@ -11,4 +11,6 @@ const pessoas = [{
     idade:33
 }]
 
-console.log(pessoas)
+for (i=0; i<pessoas.length; i++){
+    console.log(`${pessoas[i].nome} tem ${pessoas[i].idade} anos`)
+}
