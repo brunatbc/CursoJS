@@ -1,4 +1,4 @@
-const teste = function (cb){
+/*const teste = function (cb){
     console.log("função teste")
     console.log(cb)
 
@@ -12,4 +12,18 @@ const fn = function(param){
     console.log(param)
 }
 
-teste()
+teste()*/
+
+/*function greeting (name){
+    alert("Olá "+ name);
+}
+
+ function processUserInput (callback){
+     var name = prompt ("Por favor insira seu nome");
+     callback (name)
+ }
+
+ processUserInput (greeting)*/
+
+ setTimeout(() => console.log("1"),5000);
+ console.log("2");
