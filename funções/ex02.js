@@ -1,11 +1,14 @@
-        function calcularIMC(peso,altura){
-            if (typeof peso !== "number" || typeof altura !== "number"){
-                throw Error ("Por Favor Insira Apenas Números")
-             } else if (peso=== 0 || altura===0){
-                throw Error ("Para Calcular o IMC é Necessário que Nenhum dos Valores Seja 0")
-             } else {
-                return  peso / (altura ** 2)
-              }
+        function calcularIMC(peso,altura, cb){
+            if (peso=== undefined || altura === undefined){
+                throw Error ("São Necessários Dois Parâmetros");
+            }
+            let resIMC = peso / (altura *2)
+            if (typeof cb === "function"){
+                return cb (resIMC)
+            }
+
+            return resIMC
+              
             }
 
 
@@ -26,9 +29,11 @@
                     return "Seu IMC indica que você está com obesidade grau 3"    
                      }
                 
-                let resIMC = calcularIMC(74,1.57);
+                let resIMC = calcularIMC(74,1.80);
+                let resIMC2 = calcularIMC(74,1.80, classificarIMC);
+
                 console.log(resIMC);
-                console.log(classificarIMC(resIMC))
+                console.log(resIMC2)
 
+                
 
- 
