@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript Completo</title>
+</head>
+<body>
+    <h1>Curso Javascript Completo</h1>
+    
+    <main class="cmain" id="idmain">
+        <h2>subtitulo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolorem placeat in minima dignissimos, aliquam quaerat cum maiores inventore blanditiis! Quasi, ea sunt nemo iste eos possimus blanditiis nam natus!</p>
+    </main>
+
+    <form action="#">
+        <input type="text" id="txtNome" placeholder="nome"><br>
+        <input type="text" id="txtEmail" placeholder="email"><br><br>
+        <input type="checkbox" id="contrato" onchange="enableDisable()">
+        <label for="contrato">Li e aceito os termos de contratação</label><br>
+        <textarea name="" id="" cols="30" rows="10" readonly>Contrato contratado contratento contra</textarea><br><br>
+        <input type="submit" value="Cadastrar">
+        
+    </form>
+
+
+    <script>
+        const btn = document.querySelector('form input[type="submit"]')
+        btn.disabled=true//Faz mais sentido deixar o botão desabilitado via JS porque se o JS não funcionar por algum motivo em geral não vai atrapalhar a usabilidade.
+
+
+       function enableDisable(){
+           const contrato = document.getElementById("contrato")
+            
+            let checked = contrato.checked
+            console.log(checked)
+
+            btn.disabled = !checked
+
+
+            // Esse trecho de código abaixo pode ser substituído pela linha anterior que é uma forma resumida do trecho de código, tendo como noção de que o intuito e lógica principal é que o desabilitamento do botão vai sempre ser oposto ao botão não estar com um checked. 
+
+           // if (checked){                
+          //btn.disabled = false
+            //}else{
+              //  btn.disabled = true  
+
+            //}
+       }
+        
+    </script>
+</body>
+</html>

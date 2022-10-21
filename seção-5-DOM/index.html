@@ -37,7 +37,7 @@
             <section class="content-section">
                 <div id="newsletterForm"> 
                     <label for="txtEmail">Email</label>
-                    <input type="email" id="txtEmail" autocomplete="off" disabled value="brunatbc@mail.co">
+                    <input type="email" onblur="disableEmail()" id="txtEmail" autocomplete="off" value="brunatbc@mail.co">
                     <button id="btn" onclick="editarEmail()">Editar</button>
 
                 </div>
